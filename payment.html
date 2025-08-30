@@ -9,20 +9,32 @@
 </head>
 <body>
     <header>
-        <nav class="flex justify-between mx-31 my-4.5">
-           <img src="Home/imgi_1_logo-f52060c7.png" class="h-9">
+        <nav class="flex justify-between xl:mx-31 xl:my-4.5 lg:mx-25 lg:my-3.5 md:mx-20 md:my-2 sm:mx-4 mx-7 my-3">
+           <img src="Home/imgi_1_logo-f52060c7.png" class="xl:h-9 lg:h-7.5 md:h-6 sm:h-8.5 h-8">
            
            <div>
-
-            <ol class="flex gap-13" style="font-size: 21px;">
-                <li><a href="index.html">Home</a></li>
-                <li class="font-semibold border-b-3 border-b-emerald-500 pb-1"><a href="">Payments</a></li>
-                <li><a href="solutions.html">Solutions</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ol>
-
+                <ol class="md:flex xl:gap-13 lg:gap-11 md:gap-9 sm:hidden hidden">
+                    <li class="font-semibold xl:border-b-3 lg:border-b-2 md:border-b-2 border-b-emerald-500 md:pb-0 pb-1 xl:text-xl lg:text-lg md:text-sm"><a href="index.html">Home</a></li>
+                    <li class="lg:text-lg xl:text-xl md:text-sm"><a href="payment.html">Payments</a></li>
+                    <li class="lg:text-lg xl:text-xl md:text-sm"><a href="solutions.html">Solutions</a></li>
+                    <li class="lg:text-lg xl:text-xl md:text-sm"><a href="about.html">About Us</a></li>
+                </ol>
            </div>
+
+            <nav class="md:hidden">
+                <button id="ham" onclick="document.getElementById('show').style.display='block'; document.getElementById('cancel').style.display='block'; document.getElementById('ham').style.display='none';" class="cursor-pointer"><img src="menu-sharp.svg" class="sm:h-16 h-10"></button>
+                <button onclick="document.getElementById('show').style.display='none'; document.getElementById('cancel').style.display='none'; document.getElementById('ham').style.display='block';"  id="cancel" class="hidden cursor-pointer"><img src="x-16-48.png" class="h-8"></button>
+            </nav>
         </nav>
+
+        <div id="show" class="md:hidden bg-emerald-400 pt-7 pb-7 hidden sm:hidden">
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white font-bold text-lg"><a href="index.html">Home</a></h1> <a href="index.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white text-lg"><a href="payment.html">Payments</a></h1> <a href="payment.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white text-lg"><a href="solutions.html">Solutions</a></h1> <a href="solutions.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white text-lg"><a href="about.html">About Us</a></h1> <a href="about.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+        </div>
+
+       
     </header>
 
     <h1 class="font-black text-6xl text-indigo-950 text-center mt-27 mb-17">Upgrade Your Business with OPay<br> <div class="mt-3"><span class="text-emerald-500">Omnichannel</span> Payments</div></h1>

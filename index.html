@@ -9,24 +9,38 @@
 </head>
 <body>
     <header>
-        <nav class="flex justify-between xl:mx-31 xl:my-4.5 lg:mx-25 lg:my-3.5 md:mx-20 md:my-2">
-           <img src="Home/imgi_1_logo-f52060c7.png" class="xl:h-9 lg:h-7.5 md:h-6">
+        <nav class="flex justify-between xl:mx-31 xl:my-4.5 lg:mx-25 lg:my-3.5 md:mx-20 md:my-2 sm:mx-4 mx-7 my-3">
+           <img src="Home/imgi_1_logo-f52060c7.png" class="xl:h-9 lg:h-7.5 md:h-6 sm:h-8.5 h-8">
            
            <div>
-
-            <ol class="flex xl:gap-13 lg:gap-11 md:gap-9">
-                <li class="font-semibold xl:border-b-3 lg:border-b-2 md:border-b-2 border-b-emerald-500 md:pb-0 pb-1 xl:text-xl lg:text-lg md:text-sm"><a href="index.html">Home</a></li>
-                <li class="lg:text-lg xl:text-xl md:text-sm"><a href="payment.html">Payments</a></li>
-                <li class="lg:text-lg xl:text-xl md:text-sm"><a href="solutions.html">Solutions</a></li>
-                <li class="lg:text-lg xl:text-xl md:text-sm"><a href="about.html">About Us</a></li>
-            </ol>
-
+                <ol class="md:flex xl:gap-13 lg:gap-11 md:gap-9 sm:hidden hidden">
+                    <li class="font-semibold xl:border-b-3 lg:border-b-2 md:border-b-2 border-b-emerald-500 md:pb-0 pb-1 xl:text-xl lg:text-lg md:text-sm"><a href="index.html">Home</a></li>
+                    <li class="lg:text-lg xl:text-xl md:text-sm"><a href="payment.html">Payments</a></li>
+                    <li class="lg:text-lg xl:text-xl md:text-sm"><a href="solutions.html">Solutions</a></li>
+                    <li class="lg:text-lg xl:text-xl md:text-sm"><a href="about.html">About Us</a></li>
+                </ol>
            </div>
+
+            <nav class="md:hidden">
+                <button id="ham" onclick="document.getElementById('show').style.display='block'; document.getElementById('cancel').style.display='block'; document.getElementById('ham').style.display='none';" class="cursor-pointer"><img src="menu-sharp.svg" class="sm:h-16 h-10"></button>
+                <button onclick="document.getElementById('show').style.display='none'; document.getElementById('cancel').style.display='none'; document.getElementById('ham').style.display='block';"  id="cancel" class="hidden cursor-pointer"><img src="x-16-48.png" class="h-8"></button>
+            </nav>
+
+            
         </nav>
+
+        <div id="show" class="md:hidden bg-emerald-400 pt-7 pb-7 hidden sm:hidden sticky">
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white font-bold text-lg"><a href="index.html">Home</a></h1> <a href="index.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white text-lg"><a href="payment.html">Payments</a></h1> <a href="payment.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white text-lg"><a href="solutions.html">Solutions</a></h1> <a href="solutions.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white text-lg"><a href="about.html">About Us</a></h1> <a href="about.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+        </div>
+
+       
     </header>
 
 
-    <div class="flex justify-between xl:pt-25 lg:pt-20 md:pt-15 xl:pl-30 md:pl-20 lg:mb-30 md:mb-25 md:pb-4 lg:pl-25" style="background-color: rgb(240, 238, 238);">
+    <div class="md:flex justify-between xl:pt-25 lg:pt-20 md:pt-15 xl:pl-30 md:pl-20 lg:mb-30 md:mb-25 md:pb-4 lg:pl-25 sm:hidden hidden" style="background-color: rgb(240, 238, 238);">
 
         <div class="text-indigo-950">
             <h1 class="font-extrabold xl:text-7xl lg:text-6xl md:text-5xl text-indigo-950 xl:mb-10 lg:mb-7 md:mb-5">Reliable, Fast &<br> Safe Payments</h1>
@@ -49,20 +63,33 @@
 
     </div>
 
-    <div class="flex xl:mx-31 md:mx-23 md:gap-7 xl:mb-70 lg:mx-25 lg:mb-55 lg:gap-4 xl:gap-0">
+    <div class="md:hidden">
+        <div class="bg-emerald-50 pt-8 pb-2 mb-5"><img src="Home/imgi_4_banner-588cbfbc.png" class="h-53 ml-auto"></div>
+
+        <div class="mx-6">
+            <h1 class="text-4xl text-indigo-950 font-semibold mb-5">Reliable, Fast & Safe<br> Payments</h1>
+            <p class="text-indigo-950 mb-7" style="font-size: 19px;">Get omnichannel payment solutions to grow your business better!</p>
+        </div>
+
+        <div class="flex mx-7"><p style="font-size: 13px;" class="text-neutral-500">Fully Licensed by the CBN</p><img src="Home/imgi_2_icon-cbn-9e0900ac.png" class="h-5"></div>
+        <div class="flex mx-7"><p style="font-size: 13px;" class="text-neutral-500">Deposits Insured by</p><img src="Home/imgi_3_icon-ndic-1b3b5877.png" class="h-5 mt-1 ml-2"></div>
+        <button class="cursor-pointer bg-emerald-400 px-10 py-3 text-2xl font-bold text-white rounded-full mt-5 my-15 mx-7">Contact Us</button>
+    </div>
+
+    <div class="md:flex xl:mx-31 md:mx-23 md:gap-7 xl:mb-70 lg:mx-25 lg:mb-55 lg:gap-4 xl:gap-0">
 
         <div class="xl:mr-10 lg:mr-5 md:mr-4">
 
-            <div class="xl:mb-20 lg:mb-17 md:mb-12">
-                <img src="Home/imgi_5_1-2cd92858.png" class="xl:mb-10 lg:mb-10 md:mb-4">
-                <h1 class="xl:text-4xl lg:text-3xl md:text-2xl font-bold text-indigo-950 xl:mb-5 lg:mb-4 md:mb-3">Omnichannel Payments</h1>
-                <p class="xl:text-2xl lg:text-xl md:text-base text-neutral-600">Make payment collection safer, easier and faster via<br> multiple channels</p>
+            <div class="xl:mb-20 lg:mb-17 md:mb-12 mb-12">
+                <img src="Home/imgi_5_1-2cd92858.png" class="xl:mb-10 lg:mb-10 md:mb-4 mb-3">
+                <h1 class="xl:text-4xl lg:text-3xl md:text-2xl font-bold text-indigo-950 xl:mb-5 lg:mb-4 md:mb-3 text-xl mb-3 mx-5">Omnichannel Payments</h1>
+                <p class="xl:text-2xl lg:text-xl md:text-base text-neutral-600 text-sm mx-5">Make payment collection safer, easier and faster via<br> multiple channels</p>
             </div>
 
-            <div>
-                <img src="Home/imgi_7_3-bd4d22fb.png" class="xl:mb-10 lg:mb-10 md:mb-4">
-                <h1 class="xl:text-4xl lg:text-3xl md:text-2xl font-bold text-indigo-950 xl:mb-5 lg:mb-4 md:mb-3">Banking & Bill Payments</h1>
-                <p class="xl:text-2xl lg:text-xl md:text-base text-neutral-600">Enjoy financial inclusion and efficiency with the largest<br> banking agent network</p>
+            <div class="mb-12">
+                <img src="Home/imgi_7_3-bd4d22fb.png" class="xl:mb-10 lg:mb-10 md:mb-4 mb-3">
+                <h1 class="xl:text-4xl lg:text-3xl md:text-2xl font-bold text-indigo-950 xl:mb-5 lg:mb-4 md:mb-3 mx-5 text-xl mb-3">Banking & Bill Payments</h1>
+                <p class="xl:text-2xl lg:text-xl md:text-base text-neutral-600 text-sm mx-5">Enjoy financial inclusion and efficiency with the largest<br> banking agent network</p>
             </div>
 
 
@@ -70,16 +97,16 @@
 
         <div>
 
-            <div class="xl:mb-20 lg:mb-17 md:mb-12">
-                <img src="Home/imgi_6_2-e61ef372.png" class="xl:mb-10 lg:mb-10">
-                <h1 class="xl:text-4xl lg:text-3xl font-bold text-indigo-950 xl:mb-5 lg:mb-4">Industrial Payment Solutions</h1>
-                <p class="xl:text-2xl lg:text-xl text-neutral-600">Get a customized payment solution for your business</p>
+            <div class="xl:mb-20 lg:mb-17 md:mb-12 mb-12">
+                <img src="Home/imgi_6_2-e61ef372.png" class="xl:mb-10 lg:mb-10 mb-3">
+                <h1 class="xl:text-4xl lg:text-3xl font-bold text-indigo-950 xl:mb-5 lg:mb-4 text-xl mb-3 mx-5">Industrial Payment Solutions</h1>
+                <p class="xl:text-2xl lg:text-xl text-neutral-600 text-sm mx-5">Get a customized payment solution for your business</p>
             </div>
 
-            <div>
-                <img src="Home/imgi_8_4-e0c6b7a7.png" class="xl:mt-28 xl:mb-10 lg:mt-24 lg:mb-10">
-                <h1 class="xl:text-4xl lg:text-3xl font-bold text-indigo-950 xl:mb-5 lg:mb-4">Online Sales & Marketing</h1>
-                <p class="xl:text-2xl lg:text-xl text-neutral-600">Expand your sales channels from offline to online</p>
+            <div class="mb-25">
+                <img src="Home/imgi_8_4-e0c6b7a7.png" class="xl:mt-28 xl:mb-10 lg:mt-24 lg:mb-10 mb-3">
+                <h1 class="xl:text-4xl lg:text-3xl font-bold text-indigo-950 xl:mb-5 lg:mb-4 text-xl mb-3 mx-5">Online Sales & Marketing</h1>
+                <p class="xl:text-2xl lg:text-xl text-neutral-600 text-sm mx-5">Expand your sales channels from offline to online</p>
             </div>
 
 
@@ -88,44 +115,45 @@
 
     </div>
 
-    <h1 class="xl:text-6xl lg:text-6xl text-indigo-950 font-black text-center xl:mb-25 lg:mb-15"><div class="xl:mb-7 lg:mb-2">Trusted by over <span class="font-bold text-emerald-400">1,000,000</span><br></div> businesses across <span class="font-black">Nigeria</span></h1>
+    <h1 class="xl:text-6xl lg:text-6xl text-indigo-950 md:font-black text-center xl:mb-25 lg:mb-15 text-2xl font-bold mb-15"><div class="xl:mb-7 lg:mb-2">Trusted by over <span class="font-bold text-emerald-400">1,000,000</span><br></div> businesses across <span class="font-black">Nigeria</span></h1>
 
-    <div class="xl:mx-30 xl:mb-60 lg:mx-25 lg:mb-30">
-        <div class="flex xl:gap-15 xl:mb-15 lg:mb-15 lg:gap-14">
-            <img src="Home/guiness.png" class="xl:h-25 lg:h-20">
-            <img src="Home/fedex.png" class="xl:h-10 xl:mt-10 lg:h-9 lg:mt-3">
-            <img src="Home/genesis.png" class="xl:h-15 xl:mt-9 lg:h-13 lg:mt-3">
-            <img src="Home/shafa.png" class="xl:h-17 xl:mt-7 lg:h-13 lg:mt-2">
-            <img src="Home/filmhouse.png" class="xl:h-12 xl:mt-10 lg:h-9.5 lg:mt-4">
-            <img src="Home/medplus.png" class="xl:h-13 xl:mt-10 lg:h-11.5 lg:mt-4">
+    <div class="xl:mx-30 xl:mb-60 lg:mx-25 lg:mb-30 mx-7">
+        <div class="md:flex xl:gap-15 xl:mb-15 lg:mb-15 lg:gap-14 grid grid-cols-3 gap-5 mb-7">
+            <img src="Home/guiness.png" class="xl:h-25 lg:h-20 h-13">
+            <img src="Home/fedex.png" class="xl:h-10 xl:mt-10 lg:h-9 lg:mt-3 h-6">
+            <img src="Home/genesis.png" class="xl:h-15 xl:mt-9 lg:h-13 lg:mt-3 h-9">
+            <img src="Home/shafa.png" class="xl:h-17 xl:mt-7 lg:h-13 lg:mt-2 h-7">
+            <img src="Home/filmhouse.png" class="xl:h-12 xl:mt-10 lg:h-9.5 lg:mt-4 h-6">
+            <img src="Home/medplus.png" class="xl:h-13 xl:mt-10 lg:h-11.5 lg:mt-4 h-7">
         </div>
 
-        <div class="flex xl:gap-15 xl:ml-0 lg:gap-14">
-            <img src="Home/medix.png" class="xl:h-7 lg:h-6.5">
-            <img src="Home/market.png" class="xl:h-10 lg:h-9.5">
-            <img src="Home/kilimanjaro.png" class="xl:h-10 lg:h-8.5">
-            <img src="Home/mart.png" class="xl:h-10 lg:h-9">
-            <img src="Home/pharmacy.png" class="xl:h-10 lg:h-9">
-            <h1 class="text-indigo-950 xl:text-3xl lg:text-2xl">and more...</h1>
+        <div class="md:flex xl:gap-15 xl:ml-0 lg:gap-14 grid grid-cols-3 gap-5">
+            <img src="Home/medix.png" class="xl:h-7 lg:h-6.5 h-5">
+            <img src="Home/market.png" class="xl:h-10 lg:h-9.5 h-7">
+            <img src="Home/kilimanjaro.png" class="xl:h-10 lg:h-8.5 h-8">
+            <img src="Home/mart.png" class="xl:h-10 lg:h-9 h-7">
+            <img src="Home/pharmacy.png" class="xl:h-10 lg:h-9 h-7">
+            <h1 class="text-indigo-950 xl:text-3xl lg:text-2xl text-xl">and more...</h1>
         </div>
     </div>
 
-    <div class="flex xl:gap-7 justify-center xl:mb-40 lg:gap-7 lg:mb-37">
+    <div class="md:flex xl:gap-7 justify-center xl:mb-40 lg:gap-7 lg:mb-37">
+
         <div class="px-5 h-45 pt-5" style="background-color: rgb(244, 244, 244); border-radius: 5px;">
 
-            <div class="flex xl:gap-40 xl:mb-7 lg:gap-45 lg:mb-5">
+            <div class="flex xl:gap-40 xl:mb-7 lg:gap-45 lg:mb-5 gap-60">
                 <h1 class="xl:text-2xl lg:text-xl font-bold text-indigo-950 xl:mt-5 lg:mt-5">Joshua</h1>
-                <img src="Home/quotation-right-mark (1).png" class="xl:h-12 lg:h-10">
+                <img src="Home/quotation-right-mark (1).png" class="xl:h-12 lg:h-10 h-6">
             </div>
-            <p class="xl:text-sm lg:text-xs">Kudos to OPay. I've been using OPay for two years now<br> and I must say their transfer services are seamless and<br> swift.</p>
+            <p class="xl:text-sm lg:text-xs" style="font-size: 13px;">Kudos to OPay. I've been using OPay for two years now<br> and I must say their transfer services are seamless and<br> swift.</p>
 
         </div> 
 
         <div class="px-5 h-45 pt-5" style="background-color: rgb(244, 244, 244); border-radius: 5px;">
 
-            <div class="flex xl:gap-40 lg:gap-25 xl:mb-7 lg:mb-5">
+            <div class="flex xl:gap-40 lg:gap-25 xl:mb-7 lg:mb-5 gap-50">
                 <h1 class="xl:text-2xl lg:text-xl font-bold text-indigo-950 xl:mt-5 lg:mt-5">Ifeanyi</h1>
-                <img src="Home/quotation-right-mark (1).png" class="xl:h-12 lg:h-10">
+                <img src="Home/quotation-right-mark (1).png" class="xl:h-12 lg:h-10 h-7">
             </div>
             <p class="xl:text-sm lg:text-xs">I'm giving OPay five stars because of its<br> seamless services! The best experience<br> so far.</p>
 
@@ -133,9 +161,9 @@
 
         <div class="px-5 h-45 pt-5" style="background-color: rgb(244, 244, 244); border-radius: 5px;">
 
-            <div class="flex xl:gap-40 xl:mb-7 lg:gap-53 lg:mb-5">
+            <div class="flex xl:gap-40 xl:mb-7 lg:gap-53 lg:mb-5 gap-55">
                 <h1 class="xl:text-2xl lg:text-xl font-bold text-indigo-950 xl:mt-5 lg:mt-5">Ibrahim</h1>
-                <img src="Home/quotation-right-mark (1).png" class="xl:h-12 lg:h-10">
+                <img src="Home/quotation-right-mark (1).png" class="xl:h-12 lg:h-10 h-7">
             </div>
             <p class="lg:text-sm text-xs">OPay helps make my daily business easier with its POS<br> machines. The collection is fast and it drops to my account<br> instantly.</p>
 
@@ -143,35 +171,35 @@
 
     </div>
     
-    <h1 class="xl:text-5xl lg:text-4xl font-bold text-indigo-950 text-center xl:mb-20 lg:mb-16">Join Us & Grow Your Business Faster</h1>
-    <button  class="flex bg-emerald-400 xl:px-45 lg:px-27 xl:py-2 lg:py-1 rounded-full m-auto xl:mb-35 lg:mb-30"><img src="Home/imgi_21_join-tel-3d5503c9.png" class="lg:h-20 h-11 mr-2 lg:mr-4"><h1 class="lg:text-4xl text-2xl font-black text-white lg:mt-5 mt-1.5">Contact OPay</h1></button>
+    <h1 class="xl:text-5xl lg:text-4xl font-bold text-indigo-950 text-center xl:mb-20 lg:mb-16 mb-5">Join Us & Grow Your Business Faster</h1>
+    <button  class="flex bg-emerald-400 xl:px-45 md:px-27 xl:py-2 md:py-1 rounded-full m-auto xl:mb-35 md:mb-30 px-17 py-1.5 ml-9 mb-10"><img src="Home/imgi_21_join-tel-3d5503c9.png" class="lg:h-20 md:h-11 mr-2 lg:mr-4 h-9 md:mt-0 mt-1"><h1 class="lg:text-4xl md:text-2xl text-xl md:font-black font-semibold text-white lg:mt-5 mt-1.5">Contact OPay</h1></button>
 
-    <footer style="background-color: rgb(31, 2, 95);" class="flex xl:gap-39 lg:gap-20 xl:px-28 lg:px-25 xl:py-10 lg:py-7 xl:h-70 lg:h-60">
-        <img src="Home/imgi_10_footer-logo-54a9665b.png" class="xl:h-24 lg:h-20 m-auto ">
+    <footer style="background-color: rgb(31, 2, 95);" class="md:flex xl:gap-39 md:gap-20 xl:px-28 md:px-25 xl:py-10 md:py-7 xl:h-70 md:h-60 px-5 pb-10 pt-5">
+        <img src="Home/imgi_10_footer-logo-54a9665b.png" class="xl:h-24 lg:h-20 md:m-auto h-14">
         <div>
 
-            <h1 class="xl:text-2xl text-xl font-bold text-white"><a href="payment.html" class="hover:text-emerald-400">Payments</a> <span class="lg:ml-70 ml-30"><a href="solutions.html" class="hover:text-emerald-400">Solutions</a></span> <Span class="lg:ml-55 ml-22"><a href="about.html" class="hover:text-emerald-400">About OPay</a></Span></h1>
-            <hr class="text-gray-400 xl:mt-5 lg:mt-4">
+            <h1 class="xl:text-2xl text-xl font-bold text-white md:block hidden"><a href="payment.html" class="hover:text-emerald-400">Payments</a> <span class="lg:ml-70 ml-30"><a href="solutions.html" class="hover:text-emerald-400">Solutions</a></span> <Span class="lg:ml-55 ml-22"><a href="about.html" class="hover:text-emerald-400">About OPay</a></Span></h1>
+            <hr class="text-gray-400 xl:mt-5 lg:mt-4 md:block hidden">
 
-            <div class="flex xl:mt-7 lg:mt-7">
+            <div class="md:flex xl:mt-7 lg:mt-7">
 
                 <div>
 
                     <div class="flex xl:gap-2 lg:gap-1">
-                        <img src="Home/imgi_11_icon-local-2895c044.png" class="xl:h-5 lg:h-4.5">
-                        <p class="text-white font-semibold xl:text-sm lg:text-xs"><U>Lagos</U></p>
+                        <img src="Home/imgi_11_icon-local-2895c044.png" class="xl:h-5 md:h-4.5 h-5">
+                        <p class="text-white font-semibold xl:text-sm md:text-xs" style="font-size: 15px;"><U>Lagos</U></p>
                     </div>
-                    <p class="text-white mb-3.5 xl:text-sm lg:text-xs">Plot 9, Dr. Nurudeen Olowopopo Avenue, Central Business District, Alausa 100212,<br> Ikeja, Lagos, Nigeria</p>
-                    <p class="text-white xl:text-sm lg:text-xs" >Over 24 physical branches across the nation.</p>
+                    <p class="text-white mb-3.5 xl:text-sm md:text-xs" style="font-size: 15px;">Plot 9, Dr. Nurudeen Olowopopo Avenue, Central Business District, Alausa 100212,<br> Ikeja, Lagos, Nigeria</p>
+                    <p class="text-white xl:text-sm md:text-xs" style="font-size: 15px;">Over 24 physical branches across the nation.</p>
                 </div>
 
-                <div class="xl:ml-41 lg:ml-35">
-                    <p class="text-white xl:text-sm lg:text-xs">Contact us with</p>
-                    <p class="text-white xl:text-sm lg:text-xs">pos-service@opay-inc.com</p>
+                <div class="xl:ml-41 md:ml-35">
+                    <p class="text-white xl:text-sm md:text-xs" style="font-size: 15px;">Contact us with</p>
+                    <p class="text-white xl:text-sm md:text-xs" style="font-size: 15px;">pos-service@opay-inc.com</p>
                     <div class="flex gap-3 mt-3">
-                        <img src="Home/imgi_12_icon-ins-e5c4cca2.png" class="xl:h-7 lg:h-6.5">
-                        <img src="Home/imgi_13_icon-facebook-0605b220.png" class="xl:h-7 lg:h-6.5">
-                        <img src="Home/imgi_14_icon-twitter-9311abde.png" class="xl:h-7 lg:h-6.5">
+                        <img src="Home/imgi_12_icon-ins-e5c4cca2.png" class="xl:h-7 md:h-6.5 h-6">
+                        <img src="Home/imgi_13_icon-facebook-0605b220.png" class="xl:h-7 md:h-6.5 h-6">
+                        <img src="Home/imgi_14_icon-twitter-9311abde.png" class="xl:h-7 md:h-6.5 h-6">
                     </div>
                 </div>
 
