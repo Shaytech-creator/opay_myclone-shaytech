@@ -9,18 +9,34 @@
 </head>
 <body>
     <header>
-        <nav class="flex justify-between mx-31 my-4.5">
-           <img src="Home/imgi_1_logo-f52060c7.png" class="h-9">
+        <nav class="flex justify-between xl:mx-31 xl:my-4.5 lg:mx-25 lg:my-3.5 md:mx-20 md:my-2 sm:mx-4 mx-7 my-3">
+           <img src="Home/imgi_1_logo-f52060c7.png" class="xl:h-9 lg:h-7.5 md:h-6 sm:h-8.5 h-8">
            
            <div>
-                <ol class="flex gap-13" style="font-size: 21px;">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="payment.html">Payments</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
-                    <li class="font-semibold border-b-3 border-b-emerald-500 pb-1"><a href="about.html">About Us</a></li>
+                <ol class="md:flex xl:gap-13 lg:gap-11 md:gap-9 sm:hidden hidden">
+                    <li class="xl:text-xl lg:text-lg md:text-sm"><a href="index.html">Home</a></li>
+                    <li class="lg:text-lg xl:text-xl md:text-sm"><a href="payment.html">Payments</a></li>
+                    <li class="lg:text-lg xl:text-xl md:text-sm"><a href="solutions.html">Solutions</a></li>
+                    <li class="lg:text-lg xl:text-xl md:text-sm font-semibold xl:border-b-3 lg:border-b-2 md:border-b-2 border-b-emerald-500 md:pb-0 pb-1"><a href="about.html">About Us</a></li>
                 </ol>
            </div>
+
+            <nav class="md:hidden">
+                <button id="ham" onclick="document.getElementById('show').style.display='block'; document.getElementById('cancel').style.display='block'; document.getElementById('ham').style.display='none';" class="cursor-pointer"><img src="menu-sharp.svg" class="sm:h-16 h-10"></button>
+                <button onclick="document.getElementById('show').style.display='none'; document.getElementById('cancel').style.display='none'; document.getElementById('ham').style.display='block';"  id="cancel" class="hidden cursor-pointer"><img src="x-16-48.png" class="h-8"></button>
+            </nav>
+
+            
         </nav>
+
+        <div id="show" class="md:hidden bg-emerald-400 pt-7 pb-7 hidden sm:hidden sticky">
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white text-lg"><a href="index.html">Home</a></h1> <a href="index.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white text-lg"><a href="payment.html">Payments</a></h1> <a href="payment.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white text-lg"><a href="solutions.html">Solutions</a></h1> <a href="solutions.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+            <div class="flex justify-between mx-10 mb-5"><h1 class="text-white text-lg font-bold "><a href="about.html">About Us</a></h1> <a href="about.html"><img src="right-arrow-svgrepo-com (1).svg" class="h-7"></a> </div>
+        </div>
+
+       
     </header>
 
     <!-- <div class="bg-[url('/About20%Us/imgi_2_banner-c0c076bf.png')] bg-cover bg-center h-150 relative">
@@ -82,39 +98,42 @@
 
         </div>
 
-    </div>
+         <h1 class="xl:text-5xl lg:text-4xl font-bold text-indigo-950 text-center xl:mb-20 lg:mb-16 mb-5">Join Us & Grow Your Business Faster</h1>
+    <button  class="flex bg-emerald-400 xl:px-45 md:px-27 xl:py-2 md:py-1 rounded-full m-auto xl:mb-35 md:mb-30 px-17 py-1.5 ml-9 mb-10"><img src="Home/imgi_21_join-tel-3d5503c9.png" class="lg:h-20 md:h-11 mr-2 lg:mr-4 h-9 md:mt-0 mt-1"><h1 class="lg:text-4xl md:text-2xl text-xl md:font-black font-semibold text-white lg:mt-5 mt-1.5">Contact OPay</h1></button>
 
-    <footer style="background-color: rgb(31, 2, 95);" class="flex gap-39 px-28 py-10 h-70 mt-530">
-        <img src="Home/imgi_10_footer-logo-54a9665b.png" class="h-24 m-auto ">
+    <footer style="background-color: rgb(31, 2, 95);" class="md:flex xl:gap-39 md:gap-20 xl:px-28 md:px-25 xl:py-10 md:py-7 xl:h-70 md:h-60 px-5 pb-10 pt-5">
+        <img src="Home/imgi_10_footer-logo-54a9665b.png" class="xl:h-24 lg:h-20 md:m-auto h-14">
         <div>
 
-            <h1 class="text-2xl font-bold text-white"><a href="payment.html" class="hover:text-emerald-400">Payments</a> <span class="ml-70"><a href="solutions.html" class="hover:text-emerald-400">Solutions</a></span> <Span class="ml-55"><a href="about.html" class="hover:text-emerald-400">About OPay</a></Span></h1>
-            <hr class="text-gray-400 mt-5">
+            <h1 class="xl:text-2xl text-xl font-bold text-white md:block hidden"><a href="payment.html" class="hover:text-emerald-400">Payments</a> <span class="lg:ml-70 ml-30"><a href="solutions.html" class="hover:text-emerald-400">Solutions</a></span> <Span class="lg:ml-55 ml-22"><a href="about.html" class="hover:text-emerald-400">About OPay</a></Span></h1>
+            <hr class="text-gray-400 xl:mt-5 lg:mt-4 md:block hidden">
 
-            <div class="flex mt-7">
+            <div class="md:flex xl:mt-7 lg:mt-7">
 
                 <div>
 
-                    <div class="flex gap-2">
-                        <img src="Home/imgi_11_icon-local-2895c044.png" class="h-5">
-                        <p class="text-white font-semibold" style="font-size: 13px;"><U>Lagos</U></p>
+                    <div class="flex xl:gap-2 lg:gap-1">
+                        <img src="Home/imgi_11_icon-local-2895c044.png" class="xl:h-5 md:h-4.5 h-5">
+                        <p class="text-white font-semibold xl:text-sm md:text-xs" style="font-size: 15px;"><U>Lagos</U></p>
                     </div>
-                    <p class="text-white mb-3.5" style="font-size: 14px;">Plot 9, Dr. Nurudeen Olowopopo Avenue, Central Business District, Alausa 100212,<br> Ikeja, Lagos, Nigeria</p>
-                    <p class="text-white" style="font-size: 15px;">Over 24 physical branches across the nation.</p>
+                    <p class="text-white mb-3.5 xl:text-sm md:text-xs" style="font-size: 15px;">Plot 9, Dr. Nurudeen Olowopopo Avenue, Central Business District, Alausa 100212,<br> Ikeja, Lagos, Nigeria</p>
+                    <p class="text-white xl:text-sm md:text-xs" style="font-size: 15px;">Over 24 physical branches across the nation.</p>
                 </div>
 
-                <div class="ml-41">
-                    <p class="text-white" style="font-size: 15px;">Contact us with</p>
-                    <p class="text-white" style="font-size: 15px;">pos-service@opay-inc.com</p>
+                <div class="xl:ml-41 md:ml-35">
+                    <p class="text-white xl:text-sm md:text-xs" style="font-size: 15px;">Contact us with</p>
+                    <p class="text-white xl:text-sm md:text-xs" style="font-size: 15px;">pos-service@opay-inc.com</p>
                     <div class="flex gap-3 mt-3">
-                        <img src="Home/imgi_12_icon-ins-e5c4cca2.png" class="h-7">
-                        <img src="Home/imgi_13_icon-facebook-0605b220.png" class="h-7">
-                        <img src="Home/imgi_14_icon-twitter-9311abde.png" class="h-7">
+                        <img src="Home/imgi_12_icon-ins-e5c4cca2.png" class="xl:h-7 md:h-6.5 h-6">
+                        <img src="Home/imgi_13_icon-facebook-0605b220.png" class="xl:h-7 md:h-6.5 h-6">
+                        <img src="Home/imgi_14_icon-twitter-9311abde.png" class="xl:h-7 md:h-6.5 h-6">
                     </div>
                 </div>
 
             </div>
         </div>
     </footer>
+
+    </div>
 </body>
 </html>
