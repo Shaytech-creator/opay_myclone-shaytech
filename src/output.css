@@ -1170,6 +1170,11 @@
       margin: auto;
     }
   }
+  .md\:mx-5 {
+    @media (width >= 48rem) {
+      margin-inline: calc(var(--spacing) * 5);
+    }
+  }
   .md\:mx-15\.5 {
     @media (width >= 48rem) {
       margin-inline: calc(var(--spacing) * 15.5);
@@ -1405,6 +1410,11 @@
       height: calc(var(--spacing) * 100);
     }
   }
+  .md\:w-10 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 10);
+    }
+  }
   .md\:w-100 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 100);
@@ -1413,6 +1423,11 @@
   .md\:w-150 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 150);
+    }
+  }
+  .md\:w-170 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 170);
     }
   }
   .md\:w-210 {
@@ -1460,6 +1475,11 @@
       gap: calc(var(--spacing) * 20);
     }
   }
+  .md\:overflow-hidden {
+    @media (width >= 48rem) {
+      overflow: hidden;
+    }
+  }
   .md\:border-r-1 {
     @media (width >= 48rem) {
       border-right-style: var(--tw-border-style);
@@ -1475,6 +1495,11 @@
   .md\:px-4 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:px-5 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 5);
     }
   }
   .md\:px-6 {
@@ -1550,6 +1575,16 @@
   .md\:pb-10 {
     @media (width >= 48rem) {
       padding-bottom: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:pb-15 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 15);
+    }
+  }
+  .md\:pb-17 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 17);
     }
   }
   .md\:pl-20 {
@@ -1902,9 +1937,24 @@
       height: calc(var(--spacing) * 95);
     }
   }
+  .lg\:w-9 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 9);
+    }
+  }
   .lg\:w-95 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 95);
+    }
+  }
+  .lg\:w-96 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 96);
+    }
+  }
+  .lg\:w-100 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 100);
     }
   }
   .lg\:w-145 {
