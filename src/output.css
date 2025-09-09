@@ -210,8 +210,8 @@
   .m-auto {
     margin: auto;
   }
-  .mx-0 {
-    margin-inline: calc(var(--spacing) * 0);
+  .mx-4 {
+    margin-inline: calc(var(--spacing) * 4);
   }
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
@@ -224,12 +224,6 @@
   }
   .mx-10 {
     margin-inline: calc(var(--spacing) * 10);
-  }
-  .mx-15 {
-    margin-inline: calc(var(--spacing) * 15);
-  }
-  .mx-auto {
-    margin-inline: auto;
   }
   .my-3 {
     margin-block: calc(var(--spacing) * 3);
@@ -251,6 +245,9 @@
   }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-9 {
+    margin-top: calc(var(--spacing) * 9);
   }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
@@ -306,9 +303,6 @@
   .mb-15 {
     margin-bottom: calc(var(--spacing) * 15);
   }
-  .mb-17 {
-    margin-bottom: calc(var(--spacing) * 17);
-  }
   .mb-20 {
     margin-bottom: calc(var(--spacing) * 20);
   }
@@ -360,9 +354,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -380,6 +371,9 @@
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
+  }
+  .h-11 {
+    height: calc(var(--spacing) * 11);
   }
   .h-13 {
     height: calc(var(--spacing) * 13);
@@ -426,23 +420,14 @@
   .w-screen {
     width: 100vw;
   }
-  .flex-grow {
-    flex-grow: 1;
-  }
   .grow {
     flex-grow: 1;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .list-disc {
     list-style-type: disc;
@@ -490,10 +475,6 @@
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-b-emerald-500 {
     border-bottom-color: var(--color-emerald-500);
   }
@@ -539,9 +520,6 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
-  .px-8 {
-    padding-inline: calc(var(--spacing) * 8);
-  }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
   }
@@ -550,9 +528,6 @@
   }
   .px-20 {
     padding-inline: calc(var(--spacing) * 20);
-  }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
   }
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
@@ -669,33 +644,8 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-70 {
     opacity: 70%;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .marker\:text-2xl {
-    & *::marker {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-    &::marker {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-    & *::-webkit-details-marker {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-    &::-webkit-details-marker {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
   }
   .marker\:text-xl {
     & *::marker {
@@ -781,6 +731,11 @@
       margin-top: calc(var(--spacing) * 15);
     }
   }
+  .sm\:mb-5 {
+    @media (width >= 40rem) {
+      margin-bottom: calc(var(--spacing) * 5);
+    }
+  }
   .sm\:mb-8 {
     @media (width >= 40rem) {
       margin-bottom: calc(var(--spacing) * 8);
@@ -846,6 +801,11 @@
       height: calc(var(--spacing) * 17);
     }
   }
+  .sm\:h-20 {
+    @media (width >= 40rem) {
+      height: calc(var(--spacing) * 20);
+    }
+  }
   .sm\:w-300 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 300);
@@ -869,11 +829,6 @@
   .sm\:overflow-y-hidden {
     @media (width >= 40rem) {
       overflow-y: hidden;
-    }
-  }
-  .sm\:px-8 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 8);
     }
   }
   .sm\:px-10 {
@@ -2256,16 +2211,11 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
+@property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -2278,9 +2228,8 @@
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
-      --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
+      --tw-border-style: solid;
     }
   }
 }
